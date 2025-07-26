@@ -1,0 +1,4 @@
+views/reportTemplate.ejs
+**/*.ejs
+Server/views/reportTemplate.ejs
+*.ejs

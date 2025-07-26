@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "cookie-parser": "^1.4.7",
+    "react-pro-sidebar": "^1.1.0",
+    "react-toastify": "^11.0.5"
+  }
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Dr. Anjali Sharma",
+    "email": "admin1.vti@example.com",
+    "password": "password123",
+    "role": "admin",
+    "institute": "Vibrant Technical Institute, Jalna"
+  },
+  {
+    "name": "Mr. Vikram Singh",
+    "email": "admin2.vti@example.com",
+    "password": "password123",
+    "role": "admin",
+    "institute": "Vibrant Technical Institute, Jalna"
+  },
+  {
+    "name": "Prof. Priya Mehta",
+    "email": "priya.m.vti@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Computer Science",
+    "institute": "Vibrant Technical Institute, Jalna"
+  },
+  {
+    "name": "Prof. Rohan Desai",
+    "email": "rohan.d.vti@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Mechanical Engineering",
+    "institute": "Vibrant Technical Institute, Jalna"
+  },
+  {
+    "name": "Prof. Sneha Patil",
+    "email": "sneha.p.vti@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Electronics and Telecommunication",
+    "institute": "Vibrant Technical Institute, Jalna"
+  },
+  {
+    "name": "Dr. Rajesh Kumar",
+    "email": "admin1.ace@example.com",
+    "password": "password123",
+    "role": "admin",
+    "institute": "Apex College of Engineering, Jalna"
+  },
+  {
+    "name": "Mrs. Sunita Gupta",
+    "email": "admin2.ace@example.com",
+    "password": "password123",
+    "role": "admin",
+    "institute": "Apex College of Engineering, Jalna"
+  },
+  {
+    "name": "Prof. Sameer Khan",
+    "email": "sameer.k.ace@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Computer Science",
+    "institute": "Apex College of Engineering, Jalna"
+  },
+  {
+    "name": "Prof. Meera Iyer",
+    "email": "meera.i.ace@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Mechanical Engineering",
+    "institute": "Apex College of Engineering, Jalna"
+  },
+  {
+    "name": "Prof. Alok Verma",
+    "email": "alok.v.ace@example.com",
+    "password": "password123",
+    "role": "faculty",
+    "department": "Electronics and Telecommunication",
+    "institute": "Apex College of Engineering, Jalna"
+  }
+]

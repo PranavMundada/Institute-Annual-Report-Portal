@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Annual Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 40px;
+        color: #2c3e50;
+      }
+
+      h3 {
+        margin-top: 20px;
+        color: #34495e;
+      }
+
+      .entry {
+        margin: 10px 0;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+      }
+
+      .section-page {
+        page-break-before: always;
+      }
+
+      /* Avoid page break before the first section */
+      .section-page:first-of-type {
+        page-break-before: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Annual Report - <%= year %></h1>
+
+    <% let prevSection = null; let prevType = null; entries.forEach((entry, index) => {
+         const isNewSection = entry.section.name !== prevSection;
+         const isNewType = entry.type.name !== prevType;
+         if (isNewSection) { %>
+      <div class="section-page">
+        <h2><%= entry.section.name %></h2>
+    <% 
+            prevSection = entry.section.name;
+            prevType = null;
+          } else { %>
+      <div>
+    <% } 
+         if (isNewType) { %>
+        <h3><%= entry.type.name %></h3>
+    <% 
+            prevType = entry.type.name;
+          } 
+    %>
+        <div class="entry">
+          <h4><%= entry.title %></h4>
+          <p><%= entry.description %></p>
+        </div>
+      </div>
+    <% }); %>
+  </body>
+</html>
