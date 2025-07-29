@@ -151,9 +151,9 @@ export default function Submissions() {
             id="status"
             onChange={handleChangeStatus}
           >
-            {statuses.map((status) => {
+            {statuses.map((status, ind) => {
               return (
-                <option key={status} value={status} className="text-black">
+                <option key={ind} value={status} className="text-black">
                   {status}
                 </option>
               );

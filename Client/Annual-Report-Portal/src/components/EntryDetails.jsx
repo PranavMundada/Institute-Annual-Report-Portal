@@ -5,7 +5,6 @@ import { useParams } from 'react-router';
 const EntryDetails = () => {
   const [entryDetails, setEntryDetails] = useState();
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     const func = async () => {
@@ -13,7 +12,6 @@ const EntryDetails = () => {
         const res = await axios.get(`http://127.0.0.1:3000/api/entry/${id}`);
         if (res) {
           setEntryDetails(res.data.entry);
-          console.log(res.data.entry);
         }
       } catch (Err) {
         console.log(Err);
