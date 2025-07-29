@@ -1,7 +1,7 @@
 import './App.css';
 import { useNavigate } from 'react-router';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import GlobalFooter from './components/globalFooter';
 
 function App() {
   const navigate = useNavigate();
@@ -14,13 +14,13 @@ function App() {
 
         <div className="flex gap-4">
           <button
-            className="px-2 text-[15px] md:text-[20px] md:px-3 md:py-1  border-2 rounded-md  text-[#B13BFF] hover:bg-[#471396] hover:border-3 "
+            className="px-2 text-[15px] md:text-[20px] md:px-3 md:py-1  border-2 rounded-md  text-[#B13BFF] hover:bg-[#471396] active:scale-95 hover:border-3 "
             onClick={() => navigate('/signup')}
           >
             Sign Up
           </button>
           <button
-            className="px-2 text-[15px] md:text-[20px] md:px-3 md:py-1  border-2 rounded-md  text-[#B13BFF] hover:bg-[#471396] hover:border-3 "
+            className="px-2 text-[15px] md:text-[20px] md:px-3 md:py-1  border-2 rounded-md  text-[#B13BFF] hover:bg-[#471396] active:scale-95 hover:border-3 "
             onClick={() => navigate('/login')}
           >
             Log In
@@ -41,19 +41,12 @@ function App() {
         <div className="flex justify-center items-center">
           <img
             src="/homepage.svg"
-            alt="report Analytics"
+            alt="Illustration showing annual report analytics dashboard"
             className="size-65 sm:size-70 md:size-85 lg:size-100"
           />
         </div>
       </main>
-
-      <footer className="text-white bg-[#FFCC00]">
-        <div className="flex flex-col text-[15px] md:flex-row justify-evenly items-center text-black lg:text-[20px]">
-          <div>© 2025 Institute Annual Report Portal</div>
-          <div>Developed by Pranav Mundada</div>
-          <div>Contact: pjmundada2005@gmail.com</div>
-        </div>
-      </footer>
+      <GlobalFooter />
     </div>
   );
 }

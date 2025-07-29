@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid lightblue;
+  border-right-color: orange;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

@@ -4,8 +4,9 @@ import axios from 'axios';
 import Entry from './../components/Entry.jsx';
 import { useParams } from 'react-router';
 import { Outlet } from 'react-router';
-import { useLocation } from 'react-router';
 import FormInputComponent from '../components/FormInputComp.jsx';
+import { useLocation } from 'react-router';
+import Loading from '../components/loading.jsx';
 
 export default function Submissions() {
   const location = useLocation();
@@ -50,7 +51,6 @@ export default function Submissions() {
         console.log(err);
       }
     };
-    console.log(currSection);
     if (currSection !== 'All' && currSection) func();
     else setTypes([]);
   }, [currSection]);
@@ -88,13 +88,13 @@ export default function Submissions() {
         const res = await axios.get(`http://127.0.0.1:3000/api/entry`, {
           params,
         });
-        console.log(res.data.entries);
         setEntries(res.data.entries);
       }
     };
     getEntries();
   }, [currSection, currType, status, year]);
 
+  if (!userDetails) return <Loading />;
   if (!entries) {
     return <div>Loading</div>;
   }

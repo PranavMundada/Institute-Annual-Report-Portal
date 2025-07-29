@@ -63,7 +63,6 @@ const CreateEntry = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(userDetails.user.institute);
     const formData = new FormData();
     formData.append('title', titleRef.current.value);
     formData.append('description', descRef.current.value);
@@ -72,13 +71,11 @@ const CreateEntry = () => {
     formData.append('year', yearRef.current.value);
     formData.append('file', fileRef.current.files[0]);
     formData.append('institute', userDetails.user.institute);
-    console.log(fileRef.current.files[0], 'jj');
 
     try {
-      const res = await axios.post('/api/entry', formData, {
+      await axios.post('/api/entry', formData, {
         withCredentials: true,
       });
-      console.log('success: ', res.data);
     } catch (err) {
       console.log(err);
     }
